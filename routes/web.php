@@ -16,3 +16,37 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/', function () {
+    $player = [
+        'name' => 'Pippo',
+        'surname' => 'Pluto',
+    ];
+
+    $videogames = [
+        [
+            "gameTitle" => "CSGO"
+        ],
+        [
+            "gameTitle" => "VALORANT"
+        ],
+        [
+            "gameTitle" => "Resident Evil 7"
+        ],
+        [
+            "gameTitle" => "Life is Strange"
+        ],
+        [
+            "gameTitle" => "Life is Strange:Before The Storm"
+        ],
+        [
+            "gameTitle" => "The Sims"
+        ],
+    ];
+    return view('home', [
+        "user" => $player,
+        "videogame" => $videogames,
+    ]);;
+})->name("home");
+
+

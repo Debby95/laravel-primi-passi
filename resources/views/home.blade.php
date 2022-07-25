@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello world</h1>
+    <h1>Hello World!</h1>
+    <h3>Player Logged: {{ $user['name'] }} {{ $user['surname'] }}</h3>
+
+    <ul>
+        @foreach($videogame as $videogames)
+            <li>{{ $videogame['gameTitle'] }}</li>
+        @endforeach
+    </ul>
+    
 </body>
 </html>
