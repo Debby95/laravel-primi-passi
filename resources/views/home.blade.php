@@ -11,8 +11,8 @@
     <h3>Player Logged: {{ $user['name'] }} {{ $user['surname'] }}</h3>
 
     <ul>
-        @foreach($videogame as $videogames)
-            <li>{{ $videogame['gameTitle'] }}</li>
+        @foreach($videogame as $gameTitle)
+            <li>{{ $gameTitle['gameTitle'] }}</li>
         @endforeach
     </ul>
     
